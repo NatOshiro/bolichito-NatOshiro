@@ -1,5 +1,8 @@
+// modelar colores
+// en el dominio me pide que saber si x color es fuerte o no
 object  rojo{
   method fuerte() = true
+  // esta forma de escribir es SOLO sirve si es una linea de codigo
 }
 object verde {
   method fuerte() = true
@@ -10,11 +13,15 @@ object  celeste {
 object pardo {
   method fuerte() = false 
 }
+// esta es la forma que ya conocemos
 object naranja {
-  method fuerte() = true 
+  method fuerte() {
+    return true
+  }
 }
 
-// materiales
+// modelar materiales
+// aca tambien vemos el POLIMORFISMO! ya que todos los =/ objetos (materiales) entiende BRILLA es el mismo mensaje
 
 object cobre {
   method brilla() = true 
@@ -35,7 +42,9 @@ object cuero {
 // modelar las cosas
 
 object remera {
-  method color() {return rojo} 
+  method color() {
+    return rojo
+  } 
   method peso() {return 800} 
   method material() {return lino} 
 }
@@ -49,18 +58,31 @@ object biblioteca {
   method peso() {return 8000} 
   method material() {return madera}
 }
+
+// en este caso usamos variables ya que en el mismo dominio me dice que es peso y el color son variable.
+
 object placa {
-  var color = "rojo"
-  var peso = 0 
+  var color = rojo
+  var peso = 0 // tenemos que poner un valor (en este caso nro ya que es un peso) xq despues lo voy a modificar /  cambiar 
   
-  method color() {return color}
-  method color(unColor) {color = unColor}
-  method peso() {return peso} 
-  method peso(unPeso) {peso = unPeso} 
-  method material() {return cobre}
+  method color() {
+    return color
+  }
+  method color(unColor) {
+    color = unColor
+  }
+  method Peso() {
+    return peso
+  } 
+  method peso(unPeso) {
+    peso = unPeso
+  } 
+  method material() {
+    return cobre
+  }
 }
 
-// modelar mas objetos
+// modelar más objetos
 
 object arito {
   method color() {return celeste}
@@ -85,26 +107,4 @@ object cajita {
   }
   method objetoInterno(unObjeto) {
     objetoInterno = unObjeto}
-}
-
-object rosa {
-  method leGusta(unaCosa){
-    return unaCosa.peso() <= 2000
-  }
-}
-object estefania {
-  method leGusta(unaCosa){
-    return unaCosa.color().fuerte()
-    //ej remera.rojo.esFuerte?????????
-  }  
-}
-object luisa {
-  method leGusta(unaCosa){
-    return unaCosa.material().brilla()
-  } 
-}
-object juan {
-  method leGusta(unaCosa) {
-    return !unaCosa.color().fuerte() || unaCosa.peso().between(1200, 1800)
-  } 
 }

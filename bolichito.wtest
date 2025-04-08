@@ -1,5 +1,7 @@
 // es donde vamos a realizar test
 
-import.object*
+import objectos.*
+import personas.*
+import bolichito.*
 
 test ¨gusto¨
