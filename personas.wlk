@@ -5,13 +5,13 @@ import objetos.*
 // GETTER 🔍 methodo de consultar
 // SETTER metodo de efecto / accion 
 
-object rosa {
+object rosa {// le gusta los obj que pensen menos de 2.000
   method leGusta(unaCosa){
     return unaCosa.peso() <= 2000
     //return unaCosa le pregunto el peso(.peso) y luego consulto 🔍 si es menor igual a 2.000
   }
 }
-object estefania {
+object estefania {// le gustan los objetos de color fuertes
   method leGusta(unaCosa){
     return unaCosa.color().fuerte()
     //ej remera.rojo.esFuerte?????????
