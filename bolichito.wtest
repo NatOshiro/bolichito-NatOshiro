@@ -1,7 +1,19 @@
-// es donde vamos a realizar test
-
-import objectos.*
+import objetos.*
 import personas.*
 import bolichito.*
-
-test ¨gusto¨
+// es donde vamos a realizar test
+describe "le gusta los objetos que se encuntran en el bolichito" {
+  test "Rosa le gusta los objetos menores a 2.000" {
+    assert.equals(true, pelota.peso()<=2000)
+    //assert.equals(a, b)	Verifica que a == b
+    //assert significa "afirmar que algo es verdadero".Si no lo es, el test falla.
+    // como sabemos que pelota pesa 1.800 ✔
+    assert.equals(true, remera.peso() <= 2000)
+    assert.equals(true, muneco.peso() <= 2000)
+    assert.equals(true, biblioteca.peso() <= 2000)
+    assert.equals(true, placa.peso() <= 2000)
+  }
+  test "Le gustaria una placa roja de cuaquier peso" {
+    
+  }
+}
